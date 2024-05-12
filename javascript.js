@@ -1,8 +1,14 @@
-
+let n = parseInt(prompt("", ""));
+let x = 880/n;
+y = x.toString();
+console.log(y)
+while (n>100) {
+    n = parseInt(prompt("Enter a value below 100", ""))
+}
 let span = document.createElement("div");
 
-span.style.border = "solid";
-span.style.height = "49px"
+
+span.style.height = y + "px";
 
 span.addEventListener("mouseover" ,  (e) => {
                                     let x = Math.floor(Math.random()*256);
@@ -11,7 +17,7 @@ span.addEventListener("mouseover" ,  (e) => {
                                     e.target.style.background = "rgb(" + x + "," + y + "," + z + ")";
 })
 span.style.flex = "1";
-let n = parseInt(prompt("", ""));
+
 for(i=0;i<n;i++) {
     let div = document.createElement("span");
     div.style.display = "flex";
